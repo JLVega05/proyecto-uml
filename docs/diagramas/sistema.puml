@@ -9,6 +9,10 @@ class Coche {
   + __init__(marca: str, modelo: str, motor: Motor)
 }
 
+class Camion {
+  - carga_maxima: float
+  + __init__(marca: str, carga_maxima: float, motor: Motor)
+}
 
 class Motor {
   - tipo: str
@@ -16,5 +20,7 @@ class Motor {
 }
 
 Vehiculo <|-- Coche
+Vehiculo <|-- Camion
 Coche *-- Motor
+Camion *-- Motor
 @enduml
