@@ -1,0 +1,20 @@
+@startuml sistema
+class Vehiculo {
+  - marca: str
+  + __init__(marca: str)
+}
+
+class Coche {
+  - modelo: str
+  + __init__(marca: str, modelo: str, motor: Motor)
+}
+
+
+class Motor {
+  - tipo: str
+  + __init__(tipo: str)
+}
+
+Vehiculo <|-- Coche
+Coche *-- Motor
+@enduml
